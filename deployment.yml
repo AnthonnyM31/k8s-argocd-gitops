@@ -20,6 +20,11 @@ spec:
         ports:
         - containerPort: 80
           name: http
+        env:
+        - name: APP_ENV
+          value: "production"
+        - name: MANAGED_BY
+          value: "ArgoCD-GitOps"
         resources:
           requests:
             cpu: 100m
